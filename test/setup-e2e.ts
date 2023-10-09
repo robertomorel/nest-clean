@@ -19,6 +19,10 @@ const redis = new Redis({
   db: env.REDIS_DB,
 })
 
+/**
+ * @param schemaId 
+ * @returns 
+ */
 function generateUniqueDatabaseURL(schemaId: string) {
   if (!env.DATABASE_URL) {
     throw new Error('Please provider a DATABASE_URL environment variable')

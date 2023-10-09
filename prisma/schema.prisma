@@ -24,6 +24,7 @@ model User {
   comment       Comment[]
   notifications Notification[]
 
+  // Para renomear o módel e seguir o padrão de lower case
   @@map("users")
 }
 

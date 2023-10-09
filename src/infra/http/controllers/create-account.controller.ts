@@ -20,6 +20,7 @@ const createAccountBodySchema = z.object({
   password: z.string(),
 })
 
+// Inferindo tipagem pelo zod
 type CreateAccountBodySchema = z.infer<typeof createAccountBodySchema>
 
 @Controller('/accounts')

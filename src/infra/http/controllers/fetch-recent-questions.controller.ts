@@ -17,8 +17,9 @@ type PageQueryParamSchema = z.infer<typeof pageQueryParamSchema>
 
 @Controller('/questions')
 export class FetchRecentQuestionsController {
-  constructor(private fetchRecentQuestions: FetchRecentQuestionsUseCase) {}
+  constructor(private fetchRecentQuestions: FetchRecentQuestionsUseCase) { }
 
+  // Decorator @Query is to get any query param
   @Get()
   async handle(@Query('page', queryValidationPipe) page: PageQueryParamSchema) {
     const result = await this.fetchRecentQuestions.execute({

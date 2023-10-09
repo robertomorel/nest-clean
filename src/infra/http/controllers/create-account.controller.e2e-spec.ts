@@ -9,6 +9,7 @@ describe('Create Account (E2E)', () => {
   let prisma: PrismaService
 
   beforeAll(async () => {
+    // Para subir a applicação de forma programática
     const moduleRef = await Test.createTestingModule({
       imports: [AppModule],
     }).compile()
